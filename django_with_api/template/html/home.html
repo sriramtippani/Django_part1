@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% extends 'html/base.html' %}
+{% load static %}
+
+{% block title_block %}
+<title>Home page</title>
+{% endblock %}
+
+
+{% block csslink_block %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+{% endblock %}
+
+{% block body_block %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+
+      <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="http://127.0.0.1:8000/page/register">Register <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="http://127.0.0.1:8000/accounts/login">login <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="http://127.0.0.1:8000/page/logout">Logout <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to Durga Jobs</h1>
+        <p class="lead">The content displayed in this website is Genunee.</p><br><br>
+        <a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/page/hydjob/" role="button">Hyderabad Jobs</a><br><br>
+        <a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/page/banglorejob" role="button">Banglore Jobs</a><br><br>
+        <a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/page/chennaijob" role="button">Chennai Jobs</a><br><br>
+        <a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/page/punejob" role="button">Pune Jobs</a><br><br>
+    </div>
+</div>
+{% endblock %}

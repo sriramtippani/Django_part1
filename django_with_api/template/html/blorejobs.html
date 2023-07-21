@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% extends 'html/base.html' %}
+{% load static %}
+
+{% block title_block %}
+<title>Banglore Jobs</title>
+{% endblock %}
+
+
+{% block csslink_block %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block body_block %}
+<div id="m1">
+    <br>
+    <h1>Banglore Job Information</h1><hr><br>
+</div>
+
+<div align="center">
+    <img src="https://content.r9cdn.net/rimg/dimg/e3/36/d71f2b55-city-7297-16494c3d70c.jpg?width=1366&height=768&xhint=3186&yhint=1580&crop=true" alt="reload page" width="400vw" height="300vh">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLlVv727UNlmnGjCWi7_qoqNWyyWdkx1kP_Q&usqp=CAU" alt="reload page" width="400vw" height="300vh">
+    <img src="https://assets-news.housing.com/news/wp-content/uploads/2019/08/21110213/Top-5-localities-to-invest-in-Hyderabad-FB-1200x700-compressed.jpg" alt="reload page" width="400vw" height="300vh">
+</div>
+
+<div><br><br>
+    {% if job_list %}
+    <table border="2">
+        <thead>
+            <th>Date:</th>
+            <th>Company:</th>
+            <th>Title:</th>
+            <th>Eligibility:</th>
+            <th>Address:</th>
+            <th>Email:</th>
+            <th>Phone Number:</th>
+        </thead>
+        {% for value in job_list %}
+        <tr>
+            <td class="m2">{{value.date}}</td>
+            <td class="m2">{{value.company}}</td>
+            <td>{{value.title}}</td>
+            <td>{{value.eligibility}}</td>
+            <td class="m2">{{value.address}}</td>
+            <td class="m2">{{value.email}}</td>
+            <td>{{value.phone_number}}</td>
+        </tr>
+        {% endfor %}
+    </table><br>
+    {% include 'html/pagination.html' with page=job_list %}<br>
+    {% else %}
+    <h1><strong>No Jobs found in Banglore</strong></h1>
+    {% endif %}
+</div>
+{% endblock %}

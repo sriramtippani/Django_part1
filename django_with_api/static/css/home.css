@@ -1,0 +1,52 @@
+#m1 {
+    text-align: center;
+    color: indianred;
+}
+
+img {
+    margin: 10px;
+}
+
+
+table {
+    margin: auto;
+}
+
+th {
+    padding: 10px;
+    text-align: center;
+    color: red;
+    border: 5px solid magenta;
+    background: linear-gradient(45deg, #703c26, #2a4c5e);
+}
+
+td {
+    padding: 5px;
+    text-align: center;
+    color: white;
+    border: 5px solid crimson;
+    background: linear-gradient(45deg, #24753e, #5a6b1d);
+}
+
+
+
+.m2 {
+    text-align: left;
+}
+
+
+
+.paginator {
+    text-align: center;
+    background-color: deeppink;
+    width: 50vw;
+    height: 10vh;
+    margin: auto;
+    color: white;
+}
+
+body {
+    background: url(https://images.unsplash.com/photo-1669951584304-8da02ea5a54f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
